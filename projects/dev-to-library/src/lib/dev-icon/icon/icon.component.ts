@@ -42,7 +42,8 @@ export class IconComponent implements OnChanges {
           console.warn('No icon was found with prop name');
           break;
       }
-
+    }
+    if (changes['color'].currentValue) {
       this.setInputs();
     }
   }

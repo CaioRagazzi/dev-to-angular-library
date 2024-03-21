@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { IDevIcon } from '../../models/IDevIcon.interface';
+import { IconComponent } from '../../icon/icon.component';
 
 @Component({
   selector: 'dev-arrow-up',
@@ -9,9 +10,7 @@ import { IDevIcon } from '../../models/IDevIcon.interface';
     '../../styles/dev-arrow.component.scss',
   ],
 })
-export class DevArrowUpComponent implements IDevIcon {
-  @Input() color = 'black';
-
+export class DevArrowUpComponent extends IconComponent implements IDevIcon {
   getStyle() {
     return {
       'border-color': `${this.color}`,

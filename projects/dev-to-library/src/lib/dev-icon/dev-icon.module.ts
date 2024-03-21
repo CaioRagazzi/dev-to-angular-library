@@ -15,6 +15,11 @@ import { DevArrowRightComponent } from './icons/dev-arrow-right/dev-arrow-right.
     IconComponent,
   ],
   imports: [CommonModule],
-  exports: [IconComponent],
+  exports: [
+    DevArrowUpComponent,
+    DevArrowDownComponent,
+    DevArrowLeftComponent,
+    DevArrowRightComponent,
+  ],
 })
 export class DevIconModule {}

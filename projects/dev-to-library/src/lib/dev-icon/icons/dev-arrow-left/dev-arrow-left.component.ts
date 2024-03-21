@@ -1,17 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { IDevIcon } from '../../models/IDevIcon.interface';
+import { IconComponent } from '../../icon/icon.component';
 
 @Component({
-  selector: 'lib-dev-arrow-left',
+  selector: 'dev-arrow-left',
   templateUrl: './dev-arrow-left.component.html',
   styleUrls: [
     './dev-arrow-left.component.scss',
     '../../styles/dev-arrow.component.scss',
   ],
 })
-export class DevArrowLeftComponent implements IDevIcon {
-  @Input() color!: string;
-
+export class DevArrowLeftComponent extends IconComponent implements IDevIcon {
   getStyle() {
     return {
       'border-color': `${this.color}`,
